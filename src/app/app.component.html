@@ -1,0 +1,17 @@
+<div class="app">
+  <div class="app__container">
+    <h2 class="app__title">Check Password</h2>
+
+    <form [formGroup]="signupForm" class="app__form">
+        <input
+          type="password"
+          class="app__form-control"
+          formControlName="password"
+          autocomplete="off"
+          placeholder="Password"
+        >
+
+        <app-password-strength [passwordToCheck]="signupForm.value.password"></app-password-strength>
+    </form>
+    </div>
+</div>
